@@ -3,81 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vroom.lol</title>
+    <title>0xVroom | ac435</title>
     <style>
+        :root {
+            --neon-purple: #bc13fe;
+            --neon-blue: #00d4ff;
+            --dark-bg: #050505;
+        }
+
         body {
             margin: 0;
-            padding: 0;
-            background-color: #0a0a0a; /* Sleek dark mode */
+            background-color: var(--dark-bg);
             color: white;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            overflow: hidden;
+            text-align: center;
         }
 
-        .car-container {
+        .hero-image {
+            width: 85vw;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px var(--neon-purple), 0 0 60px rgba(0, 212, 255, 0.2);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
-            transition: transform 0.3s ease;
         }
 
-        .car-container:hover {
-            transform: scale(1.05);
-        }
-
-        img {
-            max-width: 80vw;
-            max-height: 50vh;
-            border-radius: 20px;
-            box-shadow: 0 0 50px rgba(255, 0, 0, 0.2); /* Subtle glow */
+        .hero-image:hover {
+            transform: scale(1.03) rotate(-1deg);
         }
 
         h1 {
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin-top: 20px;
+            font-size: 3rem;
+            margin-top: 30px;
+            letter-spacing: 8px;
+            background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(188, 19, 254, 0.5);
         }
 
         .links {
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
-        a {
-            color: #ff4d4d;
+        .links a {
+            color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            margin: 0 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            transition: 0.3s;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .links a:hover {
+            opacity: 1;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        /* Subtle scanline effect like miaow.lol */
+        body::before {
+            content: " ";
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="car-container" onclick="playVroom()">
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1000" alt="Supercar">
-    </div>
+    <img src="your-image-url-here.jpg" alt="0xVroom" class="hero-image" onclick="playEffect()">
 
-    <h1>VROOM.LOL</h1>
+    <h1>0xVROOM</h1>
 
     <div class="links">
+        <a href="https://github.com/ac435">GitHub</a>
         <a href="#">Instagram</a>
         <a href="#">Discord</a>
-        <a href="#">Shop</a>
     </div>
 
     <script>
-        function playVroom() {
-            // You can add a sound file URL here
-            console.log("Vroom vroom!");
-            alert("🏎️ Engine Started!");
+        function playEffect() {
+            console.log("Ignition sequence started...");
+            // Logic for engine sound goes here
         }
     </script>
-
 </body>
 </html>

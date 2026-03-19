@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vroom.lol</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a; /* Sleek dark mode */
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .car-container {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .car-container:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            max-width: 80vw;
+            max-height: 50vh;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.2); /* Subtle glow */
+        }
+
+        h1 {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        a {
+            color: #ff4d4d;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="car-container" onclick="playVroom()">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1000" alt="Supercar">
+    </div>
+
+    <h1>VROOM.LOL</h1>
+
+    <div class="links">
+        <a href="#">Instagram</a>
+        <a href="#">Discord</a>
+        <a href="#">Shop</a>
+    </div>
+
+    <script>
+        function playVroom() {
+            // You can add a sound file URL here
+            console.log("Vroom vroom!");
+            alert("🏎️ Engine Started!");
+        }
+    </script>
+
+</body>
+</html>
